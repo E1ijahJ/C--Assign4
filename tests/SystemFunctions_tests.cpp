@@ -19,3 +19,23 @@ TEST(MkdirLoopTest, CreatesDirectoriesCorrectly) {
         fs::remove(dirName); // Clean up after test
     }
 }
+
+
+TEST(GitInitTest, InitializesGitRepoSuccessfully) {
+    std::string testDir = "test_git_repo";
+    
+    fs::create_directory(testDir);
+    fs::current_path(testDir);  
+
+    
+    initializeGitRepo();
+
+    
+    EXPECT_TRUE(fs::exists(".git"));
+
+  
+    fs::current_path("..");
+
+  
+    fs::remove_all(testDir);
+}
