@@ -14,3 +14,10 @@ void echoString(const std::string& message) {
     std::string command = "echo \"" + message + "\"";
     system(command.c_str());
 }
+
+
+void initializeGitRepo() {
+    system("git init");
+    system("git add .");
+    system("git commit -m \"Initial commit\"");
+}
