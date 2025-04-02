@@ -8,3 +8,9 @@ void createDirectories(int count, const std::string& baseName) {
         system(command.c_str());
     }
 }
+
+
+void echoString(const std::string& message) {
+    std::string command = "echo \"" + message + "\"";
+    system(command.c_str());
+}
