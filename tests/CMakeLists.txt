@@ -1,0 +1,3 @@
+add_executable(SystemFunctions_tests SystemFunctions_tests.cpp)
+target_link_libraries(SystemFunctions_tests PRIVATE SystemFunctions gtest_main)
+gtest_discover_tests(SystemFunctions_tests)
